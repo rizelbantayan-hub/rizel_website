@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 7</title>
+</head>
+<body>
+    <style>
+        body { font-family: Arial, sans-seri; padding: 20px; }
+        .box {max-width: 420px; padding: 16px; border: 1px solid #ddd; border-radius: 8px; }
+        input { width: 100%; padding: 10px; margin: 10px 0; font-size: 16px; }
+        button { margin-top: 10px 14px; font-size: 16px; cursor: pointer; }
+        #output { margin-top: 12px; font-weight: bold; }
+    </style>
+    <body>
+        <h1>Activity 7: Functions (Greeting)</h1>
+
+        <div class="box">
+          <label for="nameInput">Althea:</label>
+          <input type="text" id="nameInput" placeholder="e.g., Maria">
+        
+        <button onclick="showGreeting()">Greet</button>
+
+        <p id="output">Output:____</p>
+        </div>
+        
+        <script>
+            function greet (name) {
+                return "Hello, " + name + "!";
+            }
+            function showGreeting () {
+                const name = document.getElementById("nameInput").value.trim();
+                const outputEl = document.getElementById("output");
+
+                if (name === "") {
+                    outputEl.textContent = "Output: Maria.";
+                    return;
+                }
+                outputEl.textContent = "Output: " + greet (name) ;
+
+            }
+        </script>
+    </body>
+</body>
+</html>
